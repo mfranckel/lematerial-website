@@ -5,13 +5,22 @@ summary: ""
 date: 2025-10-28T00:00:00+00:00
 lastmod: 2025-10-28T00:00:00+00:00
 draft: false
-weight: 510
+weight: 501
 toc: true
 seo:
   title: "LeMat-Synth Overview"
   description: "What LeMat-Synth extracts and how the pipeline works."
   canonical: ""
   noindex: false
+---
+
+**LeMat-Synth** is an open-source multi-modal toolbox for extracting structured synthesis procedures and performance data from materials science literature at scale. It was presented at [NeurIPS AI4Mat 2025](https://arxiv.org/abs/2510.26824).
+
+- [GitHub](https://github.com/LeMaterial/lematerial-llm-synthesis)
+- [arXiv paper](https://arxiv.org/abs/2510.26824)
+- [HuggingFace dataset](https://huggingface.co/datasets/LeMaterial/LeMat-Synth)
+{.no-bullets}
+
 ---
 
 LeMat-Synth is an extensible pipeline that parses scientific PDFs using large language models (LLMs) and vision-language models (VLMs) to produce structured, machine-readable records of material synthesis and performance.

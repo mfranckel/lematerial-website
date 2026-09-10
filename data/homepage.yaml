@@ -26,6 +26,12 @@ hero:
 updates:
   title: "Latest from LeMaterial"
   items:
+    - date: "2026-09-10"
+      title: "LeMat-Synth documentation is live"
+      description: "Explore how LeMat-Synth extracts structured synthesis procedures and performance data from materials science literature."
+      label: "Read the docs"
+      url: "/lemat-synth/overview/"
+      external: false
     - date: "2026-06-29"
       title: "Atompack released"
       description: "Atompack is now available as a fast storage and distribution layer for read-heavy atomistic ML datasets."
@@ -38,12 +44,6 @@ updates:
       label: "View leaderboard"
       url: "https://huggingface.co/spaces/LeMaterial/LeMat-GenBench"
       external: true
-    - date: "2025-11-26"
-      title: "Reading Group sessions are live"
-      description: "Join recurring discussions on AI for materials science with paper walkthroughs and open Q&A."
-      label: "See sessions"
-      url: "/docs/reading-group/"
-      external: false
 affiliations:
   title: "Community Contributors"
   intro: "LeMaterial brings together researchers and engineers from institutions across academia and industry. The organizations below reflect the affiliations of contributors to LeMaterial initiatives."

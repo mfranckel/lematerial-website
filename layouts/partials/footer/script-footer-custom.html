@@ -11,3 +11,21 @@
   {{ partial "footer/esbuild" (dict "src" "js/gallery.js" "load" "async" "transpile" false) -}}
 {{ end -}}
 */}}
+
+{{/*
+  Load and initialize mermaid.js on any page that used a ```mermaid code
+  block. The theme's render-codeblock-mermaid.html render hook wraps such
+  blocks in <div class="mermaid"> but never actually loads mermaid.js, so
+  without this the diagram source renders as plain unstyled text.
+*/}}
+{{ if .Page.Store.Get "hasMermaid" -}}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+  (function () {
+    var isDark = document.documentElement.getAttribute("data-bs-theme") === "dark" ||
+      (document.documentElement.getAttribute("data-bs-theme") !== "light" &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+    mermaid.initialize({ startOnLoad: true, theme: isDark ? "dark" : "default" });
+  })();
+</script>
+{{- end }}
