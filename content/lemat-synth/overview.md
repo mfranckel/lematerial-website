@@ -21,6 +21,8 @@ seo:
 - [HuggingFace dataset](https://huggingface.co/datasets/LeMaterial/LeMat-Synth)
 {.no-bullets}
 
+Tutorial and documentation were provided by Stefano Ribes!
+
 ---
 
 LeMat-Synth is an extensible pipeline that parses scientific PDFs using large language models (LLMs) and vision-language models (VLMs) to produce structured, machine-readable records of material synthesis and performance.
