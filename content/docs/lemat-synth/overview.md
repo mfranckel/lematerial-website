@@ -16,7 +16,7 @@ seo:
 
 LeMat-Synth is an extensible pipeline that parses scientific PDFs using large language models (LLMs) and vision-language models (VLMs) to produce structured, machine-readable records of material synthesis and performance.
 
-![LeMat-Synth pipeline figure](/images/publications/lemat-synth-figure1.png)
+<img src="/images/publications/lemat-synth-figure1.png" alt="LeMat-Synth pipeline figure" style="max-width:100%">
 
 ## What you get
 

@@ -21,6 +21,7 @@ By processing over **80,000 open-access papers**, LeMat-Synth builds one of the 
 - [GitHub](https://github.com/LeMaterial/lematerial-llm-synthesis)
 - [arXiv paper](https://arxiv.org/abs/2510.26824)
 - [HuggingFace dataset](https://huggingface.co/datasets/LeMaterial/LeMat-Synth)
+{.no-bullets}
 
 ---
 
@@ -30,3 +31,4 @@ By processing over **80,000 open-access papers**, LeMat-Synth builds one of the 
 - [Quick Start]({{< ref "/docs/lemat-synth/quickstart" >}}) — Installation, CLI usage, and Python API
 - [Dataset Access]({{< ref "/docs/lemat-synth/dataset" >}}) — How to load the published LeMat-Synth dataset
 - [Case Studies]({{< ref "/docs/lemat-synth/case-studies" >}}) — Thermocatalysis, superconductors, and porous materials
+{.no-bullets}
