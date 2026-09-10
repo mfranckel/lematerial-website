@@ -70,6 +70,11 @@ a {
     word-wrap: break-word;
 }
 
+.no-bullets {
+    list-style: none;
+    padding-left: 0;
+}
+
 // Make docs content wider
 .docs-content {
     max-width: 900px !important;
@@ -2031,4 +2036,12 @@ html[data-bs-theme="dark"] .lemat-blog-simple-post__back a {
         transition: none !important;
         animation: none !important;
     }
+}
+
+// Fix: .callout-content is a flex item (.callout is d-flex flex-row) but the
+// theme never gives it a flex-grow, so with min-width:0 (components/callouts)
+// it collapses to a 0-width column and wraps every word onto its own line.
+// Let it actually fill the row.
+.callout-content {
+    flex: 1 1 auto;
 }

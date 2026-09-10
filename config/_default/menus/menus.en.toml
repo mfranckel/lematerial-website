@@ -38,6 +38,11 @@
   url = "/publications/"
   weight = 11
 
+[[main]]
+  name = "LeMat-Synth"
+  url = "/lemat-synth/overview/"
+  weight = 12
+
 #[[main]]
 #  name = "Projects"
 #  identifier = "projects"

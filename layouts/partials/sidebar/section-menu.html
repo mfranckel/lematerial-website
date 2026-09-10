@@ -1,0 +1,21 @@
+{{- /*
+  Project override of @thulite/doks-core's sidebar/section-menu.html.
+
+  The upstream fallback used `.Sections` for a top-level section's sidebar,
+  which only includes child pages that are themselves sections (i.e. have
+  their own _index.md) and silently drops plain leaf pages. That's invisible
+  for sections built entirely out of sub-sections (e.g. "docs"), but for
+  lemat-synth specifically, direct leaf children like overview.md and
+  tutorials.md were disappearing from the sidebar. `.Pages` includes both
+  and sorts them the same way (by weight, then other configured criteria),
+  so it's a strict superset with no behavior change for sections that don't
+  have direct leaf children.
+*/ -}}
+{{- $sidebar := printf "sidebar_%s" .Section }}
+{{- with index site.Menus $sidebar }}
+    {{ partial "sidebar/render-section-menu.html" (dict "currentPage" $ "nodes" .) }}
+{{- else }}
+  {{ with (.Site.GetPage "section" .Section).Pages }}
+    {{ partial "sidebar/render-section-menu.html" (dict "currentPage" $ "nodes" .) }}
+  {{ end }}
+{{- end }}

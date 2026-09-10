@@ -9,7 +9,7 @@ slackInviteUrl = "https://join.slack.com/t/lematerial/shared_invite/zt-3sgv9pdoi
 
 # mainSections
 mainSections = ["docs", "blog"]
-alertText = 'LeMat-GenBench leaderboard is now live on Hugging Face. <a class="alert-link" href="https://huggingface.co/spaces/LeMaterial/LeMat-GenBench" target="_blank" rel="noopener noreferrer">Open leaderboard</a>.'
+alertText = 'LeMat-Synth is now available: a toolbox for extracting synthesis procedures from materials science literature. <a class="alert-link" href="/lemat-synth/overview/">Explore the docs</a>.'
 
 [social]
   twitter = "getdoks"
@@ -49,7 +49,7 @@ alertText = 'LeMat-GenBench leaderboard is now live on Hugging Face. <a class="a
   bootstrapJavascript = true # false (default) or true
 
   # Nav
-  sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  sectionNav = ["docs", "lemat-synth"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false

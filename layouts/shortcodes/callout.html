@@ -1,0 +1,40 @@
+{{- /*
+  Project override of @thulite/doks-core's callout.html.
+
+  Root cause of the original bug: this shortcode is invoked with {{< >}}
+  (not {{% %}}) precisely because its own output contains literal HTML
+  wrapper tags. A {{% %}} shortcode's entire rendered output is re-injected
+  into the page's markdown source and re-parsed by Goldmark; CommonMark then
+  treats the leading `<div>` as the start of an HTML block, which pass
+  through verbatim (dropping inline markdown rendering) and terminates on
+  the first blank line, corrupting shortcode boundary tracking for any
+  callout with multi-paragraph content or substantial content after it.
+  {{< >}} output is inserted as-is, without a second parse, so we convert
+  the raw `.Inner` markdown to HTML ourselves via `markdownify` instead of
+  relying on (or needing) $.Page.RenderString.
+
+  Usage: `callout context="type"` ("note" default, "info", "danger", or
+  "warning"), optional `title="..."` and `icon="..."`.
+*/ -}}
+
+{{- $css_class := "" -}}
+{{- if .IsNamedParams -}}
+  {{- $css_class = .Get "context" | default "note" -}}
+{{- else -}}
+  {{- $css_class = .Get 0 | default "note" -}}
+{{- end -}}
+
+{{- $icon := .Get "icon" -}}
+{{- $title := .Get "title" -}}
+
+<div class="callout callout-{{ $css_class }} d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  {{ with $icon -}}
+    {{ partial "inline-svg" (dict "src" $icon "class" "callout-icon me-2 mb-3") }}
+  {{- end }}
+  <div class="callout-content">
+    {{ with $title -}}
+      <div class="callout-title">{{ . | markdownify }}</div>
+    {{- end }}
+    <div class="callout-body">{{ .Inner | markdownify }}</div>
+  </div>
+</div>
