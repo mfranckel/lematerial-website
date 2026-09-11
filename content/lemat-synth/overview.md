@@ -21,7 +21,7 @@ seo:
 - [HuggingFace dataset](https://huggingface.co/datasets/LeMaterial/LeMat-Synth)
 {.no-bullets}
 
-Tutorial and documentation were provided by Stefano Ribes!
+Tutorial and documentation were provided by [Stefano Ribes](https://www.linkedin.com/in/stefano-ribes-1379b1107?trk=feed-detail_main-feed-card-text)!
 
 ---
 
